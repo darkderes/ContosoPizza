@@ -1,0 +1,33 @@
+
+Creación de un proyecto de API web
+
+Paso 1:
+
+#Este comando crea los archivos para un proyecto de API web básico, junto con un archivo de proyecto de C# de nombre ContosoPizza.csproj, que va a devolver una lista de previsiones meteorológicas.
+
+dotnet new webapi --no-https
+
+ Importante
+
+## Antes de realizar ningún trabajo de producción con API web y, categóricamente, antes de implementar en producción, se recomienda configurar el certificado de desarrollo HTTPS de ASP.NET Core. Esto ayuda a mantener la privacidad de las comunicaciones de API, así como a proteger frente a alteraciones mediante ataques de tipo "Man in the middle".
+
+1.Compilación y prueba de la API web
+
+dotnet build
+
+2.Ejecute el comando siguiente de la CLI de .NET Core en el shell de comandos:
+
+dotnet run
+
+El comando anterior:
+
+Hospeda la API web con el servidor web de Kestrel de ASP.NET Core.
+Genera información de registro de la API web en ejecución.
+La API web se hospeda en ambos http://localhost:5000. Si no se pasara la marca --no-https, se vería que la API también se ejecuta en https://localhost:5001.
+
+3.Abra un explorador web y vaya a:
+
+http://localhost:5000/weatherforecast
+
+fuente : https://docs.microsoft.com/es-es/learn/modules/build-web-api-aspnet-core/3-exercise-create-web-api
+
